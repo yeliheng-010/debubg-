@@ -55,7 +55,7 @@ ROOT_URLCONF = 'djangoProject7.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': []
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -121,7 +121,24 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+TENCENT_SMS_APP_ID = 1400799079
+
+# 腾讯云短信应用的 app_key
+TENCENT_SMS_APP_KEY = "6e0548ceb838817537492c848effdf55"
+
+# 腾讯云短信签名内容
+TENCENT_SMS_SIGN = "Python学习1"
+
+
+
+TENCENT_SMS_TEMPLATE={
+    'register':1716559,
+    'login':1716553
+}
+
 #短信模板
+
+
 SMS=0
 try:
     from .local_settings import *
